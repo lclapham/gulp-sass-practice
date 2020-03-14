@@ -436,3 +436,20 @@ h1, h2, h3, h4, h5, h6 {
   .media a {
     text-decoration: none;
     color: #022933; }
+
+.table {
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%; }
+  .table caption {
+    font-size: 2.5rem;
+    text-align: left;
+    padding-bottom: 5px; }
+  .table > thead > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > th,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > th,
+  .table > tfoot > tr > td {
+    padding: 10px;
+    border-bottom: 2px dotted #0076A3; }
