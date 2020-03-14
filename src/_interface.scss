@@ -2,6 +2,7 @@ $color-btn-text: $darkblue;
 $color-btn-default: $text-color;
 $color-btn-hot: $red;
 $color-btn-cool: $blue;
+$roundness: 20px 0 20px 0;
 
 // This creates a shadow class with %
 %btn {
@@ -38,11 +39,11 @@ $color-btn-cool: $blue;
   @include clearFix;
    .item {
     float: left;
-    @include imageGrid(3, 1%);
+    @include imageGrid(3, 2%);
   }
   img {
     display: block;
-    border-radius: 10px;
+    border-radius:nth($roundness, 1);
     max-width: 100%;
     height: auto;
   }
