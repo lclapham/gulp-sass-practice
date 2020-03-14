@@ -1,4 +1,7 @@
+$color-even-cells: transparentize($yellow, .5);
+
 .table {
+    border-collapse: collapse;
   font-size: 1.5rem;
   text-align: left;
   width: 100%;
@@ -12,11 +15,30 @@
   > tbody,
   > tfoot {
     > tr {
+        &:hover {
+            background-color: darken(adjust-hue($background, -20deg), 10%);
+        }
+        &:nth-child(even){
+            background-color: $color-even-cells;
+            &:hover {
+                background-color: opacify($color-even-cells, .3);
+            }
+        }
       > th,
       > td {
         padding: 10px;
         border-bottom: 2px dotted $blue;
       }
     }
+  }
+  > thead, > tr {
+      background-color: $blue;
+      color: $background;
+      &:hover {
+          background-color: complement($blue);
+      }
+      > th {
+          border-bottom: 0;
+      }
   }
 }

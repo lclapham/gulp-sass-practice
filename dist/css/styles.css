@@ -438,6 +438,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #022933; }
 
 .table {
+  border-collapse: collapse;
   font-size: 1.5rem;
   text-align: left;
   width: 100%; }
@@ -445,6 +446,18 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.5rem;
     text-align: left;
     padding-bottom: 5px; }
+  .table > thead > tr:hover,
+  .table > tbody > tr:hover,
+  .table > tfoot > tr:hover {
+    background-color: #dfc5b2; }
+  .table > thead > tr:nth-child(even),
+  .table > tbody > tr:nth-child(even),
+  .table > tfoot > tr:nth-child(even) {
+    background-color: rgba(163, 139, 0, 0.5); }
+    .table > thead > tr:nth-child(even):hover,
+    .table > tbody > tr:nth-child(even):hover,
+    .table > tfoot > tr:nth-child(even):hover {
+      background-color: rgba(163, 139, 0, 0.8); }
   .table > thead > tr > th,
   .table > thead > tr > td,
   .table > tbody > tr > th,
@@ -453,3 +466,10 @@ h1, h2, h3, h4, h5, h6 {
   .table > tfoot > tr > td {
     padding: 10px;
     border-bottom: 2px dotted #0076A3; }
+  .table > thead, .table > tr {
+    background-color: #0076A3;
+    color: #EEE8D6; }
+    .table > thead:hover, .table > tr:hover {
+      background-color: #a32d00; }
+    .table > thead > th, .table > tr > th {
+      border-bottom: 0; }
