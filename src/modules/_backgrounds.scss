@@ -26,6 +26,7 @@
 }
 
 .jumbotron {
+    margin-top: 0;
     @include backImage('../images/bridge.jpg', 500px);
    
 }

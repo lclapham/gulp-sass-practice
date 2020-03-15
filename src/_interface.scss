@@ -19,20 +19,31 @@ $roundness: 20px 0 20px 0;
   color: $background;
 }
 
-.btn-default {
-  @extend %btn;
-  background: $color-btn-default;
+$color-btn-names: 'default', 'cool', 'hot',;
+$color-btn-values: $text-color, $blue, $red;
+
+@each $name in $color-btn-names {
+  $i: index($color-btn-names, $name); // somehow this iterates through the names 
+  .btn-#{$name} {   // vidoes totally don't explain it.
+    @extend %btn;
+    background-color: nth($color-btn-values, $i);
+  }
 }
 
-.btn-hot {
-  @extend %btn;
-  background: $color-btn-hot;
-}
+// .btn-default {
+//   @extend %btn;
+//   background: $color-btn-default;
+// }
 
-.btn-cool {
-  @extend %btn;
-  background: $color-btn-cool;
-}
+// .btn-hot {
+//   @extend %btn;
+//   background: $color-btn-hot;
+// }
+
+// .btn-cool {
+//   @extend %btn;
+//   background: $color-btn-cool;
+// }
 
 .grid {
   margin-bottom: 15px;

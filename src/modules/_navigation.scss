@@ -1,51 +1,64 @@
+header,
+footer {
+  background-color: darken($blue, 15%);
+}
 
-header .container {
-    width: 100%;
+footer .container {
+  margin: 0;
+  text-align: center;
 }
 
 nav {
-    header & {
-        background-color: darken($blue, 15%);
+  header & {
+    background-color: darken($blue, 15%);
+  }
+
+  .branding {
+    float: left;
+    display: none;
+    @include break(1000px) {
+      display: block;
+    } // THis is tied to mixin called break an requires the content call.
+  }
+  .branding h1 {
+    font-size: 2.75rem;
+    overflow: hidden;
+    margin: 0;
+    color: $yellow;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include clearFix;
+  }
+  ul li {
+    @include break(760px) {
+      float: left;
     }
-    
-    .branding {
-        float: left;
+    padding: 10px 5px;
+  }
+  ul li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 10ps 5px;
+    color: $background;
+    &:hover {
+      color: $yellow;
     }
-    .branding h1 {
-        font-size: 2.75rem;
-        overflow: hidden;
-        margin: 0;
-        color: $yellow;
-    }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        @include clearFix;
-    } 
-    ul li {
-        float: left;
-        padding: 10px 5px;
-    }
-    ul li a {
-        text-decoration: none;
-        padding: 10ps 5px;
-        color: $background;
-        &:hover {
-            color: $yellow;
-        }
-        header &:hover {
-            background-color: darken($blue, 20%);
-        }
-        footer & {
-            color: white;
-        }
+    header &:hover {
+      background-color: darken($blue, 20%);
     }
     footer & {
-        margin-top: 20px;
-        min-height: 200px;
-        background-color: darken($blue, 15%);
-
+      color: white;
     }
-
+  }
+  footer & {
+      @include break(0, 500px) {
+          display: none;
+      }
+    margin-top: 20px;
+    min-height: 200px;
+    background-color: darken($blue, 15%);
+  }
 }
