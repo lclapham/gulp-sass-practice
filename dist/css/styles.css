@@ -305,7 +305,7 @@ template {
 [hidden] {
   display: none; }
 
-.btn-default, .btn-cool, .btn-hot {
+.btn-default, .btn-hot, .btn-cool, .btn-purple {
   display: inline-block;
   padding: 6px 12px;
   text-align: center;
@@ -321,11 +321,14 @@ template {
 .btn-default {
   background-color: #022933; }
 
+.btn-hot {
+  background-color: #D14348; }
+
 .btn-cool {
   background-color: #0076A3; }
 
-.btn-hot {
-  background-color: #D14348; }
+.btn-purple {
+  background-color: #6D73c2; }
 
 .grid {
   margin-bottom: 15px; }

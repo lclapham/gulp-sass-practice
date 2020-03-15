@@ -19,14 +19,23 @@ $roundness: 20px 0 20px 0;
   color: $background;
 }
 
-$color-btn-names: 'default', 'cool', 'hot',;
-$color-btn-values: $text-color, $blue, $red;
+// $color-btn-names: 'default', 'cool', 'hot',;
+// $color-btn-values: $text-color, $blue, $red;
 
-@each $name in $color-btn-names {
-  $i: index($color-btn-names, $name); // somehow this iterates through the names 
+
+$color-btns: (
+  default: $text-color,
+  hot: $red,
+  cool: $blue,
+  purple: $purple
+);
+
+@each $name, $value in $color-btns {
+  // $i: index($color-btn-names, $name); // somehow this iterates through the names 
   .btn-#{$name} {   // vidoes totally don't explain it.
     @extend %btn;
-    background-color: nth($color-btn-values, $i);
+    // background-color: nth($color-btn-values, $i);
+    background-color: $value;
   }
 }
 
